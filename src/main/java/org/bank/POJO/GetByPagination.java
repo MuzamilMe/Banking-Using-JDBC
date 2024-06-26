@@ -1,11 +1,8 @@
 package org.bank.POJO;
 
-/**
- * @author Muzamil-M
- */
 public class GetByPagination {
-    int currentPage, itemsperPage;
-    String sortBy, Direction;
+    int currentPage,itemsperPage;
+    String sortBy,Direction;
 
     public int getCurrentPage() {
         return currentPage;
@@ -38,15 +35,4 @@ public class GetByPagination {
     public void setDirection(String direction) {
         Direction = direction;
     }
-
-    @Override
-    public String toString() {
-        return "GetByPagination{" +
-                "currentPage=" + currentPage +
-                ", itemsperPage=" + itemsperPage +
-                ", sortBy='" + sortBy + '\'' +
-                ", Direction='" + Direction + '\'' +
-                "\n"+'}';
-    }
 }
-

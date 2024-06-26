@@ -6,79 +6,75 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Account {
-    int customerid;
-    int amout, pinCode;
-    int accountNo;
-    Date date = Calendar.getInstance().getTime();
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-    String dateOfCreate = dateFormat.format(date);
-    String accountType;
+   int customerid;
+   int amout,pinCode;
+   int  accountNo;
+//   Date currentDate = new Date();
+//   LocalDateTime now = LocalDateTime.now();
+//   SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//    Date dateOfCreate = dateFormat.format(now);
+Date date = Calendar.getInstance().getTime();
+   DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+   String dateOfCreate = dateFormat.format(date);
+   String accountType;
 
-    public Account() {
-    }
+   public int getCustomerid() {
+      return customerid;
+   }
 
-    public int getCustomerid() {
-        return customerid;
-    }
+   public void setCustomerid(int customerid) {
+      this.customerid = customerid;
+   }
 
-    public void setCustomerid(int customerid) {
-        this.customerid = customerid;
-    }
 
-    public int getAccountNo() {
 
-        return accountNo;
-    }
+   public Account() {
+   }
 
-    public void setAccountNo(int accountNo) {
+   public int getAccountNo() {
 
-        this.accountNo = accountNo;
-    }
+      return accountNo;
+   }
 
-    public int getPinCode() {
-        return pinCode;
-    }
+   public void setAccountNo(int accountNo) {
 
-    public void setPinCode(int pinCode) {
+      this.accountNo = accountNo;
+   }
 
-        this.pinCode = pinCode;
-    }
+   public int getPinCode() {
+      return pinCode;
+   }
 
-    public String getDateOfCreate() {
+   public void setPinCode(int pinCode) {
 
-        return dateOfCreate;
-    }
+      this.pinCode = pinCode;
+   }
 
-    public void setDateOfCreate(String Doc) {
-        Doc = this.dateOfCreate;
 
-    }
 
-    public String getAccountType() {
-        return accountType;
-    }
+   public void setDateOfCreate() {
+      String Doc = this.dateOfCreate;
 
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
-    }
+   }
+   public String getDateOfCreate() {
 
-    public int getAmout() {
-        return amout;
-    }
+      return dateOfCreate;
+   }
 
-    public void setAmout(int amout) {
-        this.amout = amout;
-    }
+   public String getAccountType() {
+      return accountType;
+   }
 
-    @Override
-    public String toString() {
-        return "ServiceAccount{" +
-                "customerid=" + customerid +
-                ", amout=" + amout +
-                ", pinCode=" + pinCode +
-                ", accountNo=" + accountNo +
-                ", dateOfCreate='" + dateOfCreate + '\'' +
-                ", accountType='" + accountType + '\'' +
-                "\n"+'}';
-    }
+   public void setAccountType(String accountType) {
+      this.accountType = accountType;
+   }
+
+   public int getAmout() {
+      return amout;
+   }
+
+   public void setAmout(int amout) {
+      this.amout = amout;
+   }
+
 }

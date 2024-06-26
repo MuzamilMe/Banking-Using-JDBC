@@ -1,9 +1,26 @@
 package org.bank.POJO;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Transaction {
 
-    String dd;
+    int counter;
+    LocalDate currentDate = LocalDate.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+
+
     String transectionId;
+
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
     String transferType;
     int amount;
     int Sender_Acc;
@@ -38,17 +55,16 @@ public class Transaction {
     }
 
     public void setTransferType(String transferType) {
-
         this.transferType = transferType;
     }
 
     public String getDateOfTransfer() {
-        return dd;
+
+        return String.valueOf(formatter.format(currentDate));
     }
 
-    public void setDateOfTransfer(String dateOfTransfer) {
-
-        this.dd = dateOfTransfer;
+    public void setDateOfTransfer() {
+        LocalDate dateOfTransfer= this.currentDate;
     }
 
     public int getAmount() {
@@ -59,17 +75,5 @@ public class Transaction {
     public void setAmount(int amount) {
 
         this.amount = amount;
-    }
-
-    @Override
-    public String toString() {
-        return "Transaction{ " +
-                "Date: " + dd +
-                ", transectionId: '" + transectionId + '\'' +
-                ", transferType: '" + transferType + '\'' +
-                ", amount: " + amount +
-                ", Sender_Acc: " + Sender_Acc +
-                ", Reciever_Acc: " + Reciever_Acc +
-                "\n"+'}';
     }
 }

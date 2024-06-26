@@ -5,8 +5,7 @@ package org.bank.POJO;
  */
 public class Customer {
     int customerId;
-    String firstName, lastName, city, state, country, address, contactNo;
-
+    String firstName,lastName,city,state,country,address,contactNo;
     public int getCustomerId() {
         return customerId;
     }
@@ -71,17 +70,4 @@ public class Customer {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "customerId=" + customerId +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", country='" + country + '\'' +
-                ", address='" + address + '\'' +
-                ", contactNo='" + contactNo + '\'' +
-                "\n"+'}';
-    }
 }
